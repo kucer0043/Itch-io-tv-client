@@ -1,19 +1,126 @@
 <!DOCTYPE html>
 <html lang="ru">
-   <head>
-      <meta charset="UTF-8">
-      <title>HTML Document</title>
-      <style>
-        body {
-        font-family: Verdana, sans-serif;
-            }
-        p {
-            text-align: center;
-        }
-      </style>
-      <script src="index.js"></script>
-   </head>
-   <body>
-    <p>Itch-io-TV</p>
-   </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Document</title>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    iframe {
+      display: block;
+      /* iframes are inline by default */
+      height: 100vh;
+      /* Set height to 100% of the viewport height */
+      width: 100vw;
+      /* Set width to 100% of the viewport width */
+      border: none;
+      /* Remove default border */
+      background: lightyellow;
+      /* Just for styling */
+      border: 0px solid;
+    }
+
+    .frame {
+      height: 100%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+      background-size: 1800% 1800%;
+
+      -webkit-animation: rainbow 18s ease infinite;
+      -z-animation: rainbow 18s ease infinite;
+      -o-animation: rainbow 18s ease infinite;
+      animation: rainbow 18s ease infinite;
+    }
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden
+    }
+
+    @-webkit-keyframes rainbow {
+      0% {
+        background-position: 0% 82%
+      }
+
+      50% {
+        background-position: 100% 19%
+      }
+
+      100% {
+        background-position: 0% 82%
+      }
+    }
+
+    @-moz-keyframes rainbow {
+      0% {
+        background-position: 0% 82%
+      }
+
+      50% {
+        background-position: 100% 19%
+      }
+
+      100% {
+        background-position: 0% 82%
+      }
+    }
+
+    @-o-keyframes rainbow {
+      0% {
+        background-position: 0% 82%
+      }
+
+      50% {
+        background-position: 100% 19%
+      }
+
+      100% {
+        background-position: 0% 82%
+      }
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 82%
+      }
+
+      50% {
+        background-position: 100% 19%
+      }
+
+      100% {
+        background-position: 0% 82%
+      }
+    }
+  </style>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="game"></div>
+  <div class="load">
+    <iframe class="frame" srcdoc="<h1>Loading</h1> <style>body {
+      font-family: Verdana, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }</style>">OLD-TV
+    </iframe>
+  </div>
+</body>
+
 </html>
